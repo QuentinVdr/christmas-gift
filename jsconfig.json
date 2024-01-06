@@ -1,7 +1,19 @@
 {
   "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES6",
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "checkJs": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    // Path aliases configuration (don't forget to also configure Vite with these)/
     "paths": {
-      "@/*": ["./src/*"]
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"]
     }
-  }
+  },
+  "include": ["src", ".eslintrc.json", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules", "build", ".vscode", ".git", "dist"]
 }
