@@ -8,11 +8,6 @@
     "checkJs": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    // Path aliases configuration (don't forget to also configure Vite with these)/
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@styles/*": ["src/styles/*"]
-    }
   },
   "include": ["src", ".eslintrc.json", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules", "build", ".vscode", ".git", "dist"]
