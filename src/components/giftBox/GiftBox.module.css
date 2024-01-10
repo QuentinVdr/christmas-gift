@@ -10,6 +10,25 @@
   background: linear-gradient(#762c2c, #ff0303);
   background-color: #cc231e;
 }
+.boxBody .images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.boxBody .image {
+  opacity: 0;
+  scale: 0;
+  transform: translateY(0%);
+  transition: all 0.5s;
+  margin: 0 auto;
+  display: block;
+}
+.boxBody #circuit {
+  transform: translateX(50%);
+}
+.boxBody #alpine {
+  transform: translateX(-50%);
+}
 .boxBodyOpen {
   cursor: pointer;
   -webkit-animation: boxBody 1s forwards ease-in-out;
@@ -26,6 +45,17 @@
 .boxBodyOpen .boxBowtie::after {
   -webkit-animation: boxBowtie-right 1.1s forwards ease-in-out;
   animation: boxBowtie-right 1.1s forwards ease-in-out;
+}
+.boxBodyOpen .image {
+  opacity: 1;
+  z-index: 0;
+  scale: 1;
+}
+.boxBodyOpen #circuit {
+  transform: translateY(-300px) translateX(-50%);
+}
+.boxBodyOpen #alpine {
+  transform: translateY(-300px) translateX(50%);
 }
 .boxBody::after {
   content: '';
