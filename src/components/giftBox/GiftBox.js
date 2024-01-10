@@ -1,8 +1,8 @@
 import styles from './GiftBox.module.css';
 
-export default function GiftBox() {
+export default function GiftBox({ isOpen }) {
   return (
-    <div className={styles.boxBody}>
+    <div className={isOpen ? `${styles.boxBody} ${styles.boxBodyOpen}` : styles.boxBody}>
       <div className={styles.boxLid}>
         <div className={styles.boxBowtie}></div>
       </div>
