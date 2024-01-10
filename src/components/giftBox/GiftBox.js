@@ -1,23 +1,24 @@
+import Image from 'next/image';
 import styles from './GiftBox.module.css';
 
 export default function GiftBox({ isOpen }) {
   return (
     <div className={isOpen ? `${styles.boxBody} ${styles.boxBodyOpen}` : styles.boxBody}>
       <div className={styles.images}>
-        <img
+        <Image
           id={styles.circuit}
           className={styles.image}
-          src="https://via.placeholder.com/150"
-          alt="cadeau - image circuit"
-          width={150}
+          src="/loheac-circuit.jpg"
+          alt="indice cadeau circuit de lohéac"
+          width={250}
           height={150}
         />
-        <img
+        <Image
           id={styles.alpine}
           className={styles.image}
-          src="https://via.placeholder.com/150"
-          alt="cadeau - image alpine"
-          width={150}
+          src="/alpine-110S.jpg"
+          alt="indice cadeau alpine 110S"
+          width={250}
           height={150}
         />
       </div>
