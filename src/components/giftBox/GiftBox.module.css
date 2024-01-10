@@ -22,12 +22,7 @@
   transition: all 0.5s;
   margin: 0 auto;
   display: block;
-}
-.boxBody #circuit {
-  transform: translateX(50%);
-}
-.boxBody #alpine {
-  transform: translateX(-50%);
+  position: absolute;
 }
 .boxBodyOpen {
   cursor: pointer;
@@ -52,10 +47,18 @@
   scale: 1;
 }
 .boxBodyOpen #circuit {
-  transform: translateY(-300px) translateX(-50%);
+  transform: translateY(-300px) translateX(-75%);
 }
 .boxBodyOpen #alpine {
-  transform: translateY(-300px) translateX(50%);
+  transform: translateY(-300px) translateX(75%);
+}
+@media screen and (max-width: 750px) {
+  .boxBodyOpen #circuit {
+    transform: translateY(-400px);
+  }
+  .boxBodyOpen #alpine {
+    transform: translateY(-200px);
+  }
 }
 .boxBody::after {
   content: '';
