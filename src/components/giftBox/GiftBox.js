@@ -1,30 +1,24 @@
-import Image from 'next/image';
+'use client';
+
+import { useState } from 'react';
 import styles from './GiftBox.module.css';
 
-export default function GiftBox({ isOpen }) {
+export default function GiftBox({ children: gift }) {
+  const [isGiftOpen, setIsGiftOpen] = useState(false);
+
   return (
-    <div className={isOpen ? `${styles.boxBody} ${styles.boxBodyOpen}` : styles.boxBody}>
-      <div className={styles.images}>
-        <Image
-          id={styles.circuit}
-          className={styles.image}
-          src="/loheac-circuit.jpg"
-          alt="indice cadeau circuit de lohéac"
-          width={250}
-          height={150}
-        />
-        <Image
-          id={styles.alpine}
-          className={styles.image}
-          src="/alpine-110S.jpg"
-          alt="indice cadeau alpine 110S"
-          width={250}
-          height={150}
-        />
+    <button
+      className={styles.giftButton}
+      onClick={() => {
+        setIsGiftOpen((prevIsGiftOpen) => !prevIsGiftOpen);
+      }}
+    >
+      <div className={isGiftOpen ? `${styles.boxBody} ${styles.boxBodyOpen}` : styles.boxBody}>
+        <div className={styles.images}>{gift}</div>
+        <div className={styles.boxLid}>
+          <div className={styles.boxBowtie}></div>
+        </div>
       </div>
-      <div className={styles.boxLid}>
-        <div className={styles.boxBowtie}></div>
-      </div>
-    </div>
+    </button>
   );
 }
