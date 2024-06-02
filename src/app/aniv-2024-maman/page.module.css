@@ -1,0 +1,27 @@
+.main {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+}
+.giftButton {
+  visibility: hidden;
+}
+.box {
+  position: relative;
+}
+.box::before {
+  content: '';
+  width: 440px;
+  height: 440px;
+  background-color: #89cff0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
