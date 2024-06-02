@@ -5,25 +5,17 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Joyeux noël !</h1>
+      <h1 className={styles.title}>Joyeux anniversaire maman !</h1>
       <div className={styles.box}>
         <GiftBox>
-          <div className={giftStyles.images}>
+          <div>
             <img
-              id={giftStyles.circuit}
+              id={giftStyles.massage}
               className={giftStyles.image}
-              src="/noel-2023-papa/loheac-circuit.jpg"
+              src="/aniv-2024-maman/massageCalicéo.png"
               alt="indice cadeau circuit de lohéac"
-              width={250}
-              height={150}
-            />
-            <img
-              id={giftStyles.alpine}
-              className={giftStyles.image}
-              src="/noel-2023-papa/alpine-110S.jpg"
-              alt="indice cadeau alpine 110S"
-              width={250}
-              height={150}
+              width={300}
+              height={225}
             />
           </div>
         </GiftBox>

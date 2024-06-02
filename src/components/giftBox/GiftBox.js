@@ -14,7 +14,7 @@ export default function GiftBox({ children: gift }) {
       }}
     >
       <div className={isGiftOpen ? `${styles.boxBody} ${styles.boxBodyOpen}` : styles.boxBody}>
-        <div className={styles.images}>{gift}</div>
+        {gift}
         <div className={styles.boxLid}>
           <div className={styles.boxBowtie}></div>
         </div>
