@@ -7,7 +7,7 @@
     "isolatedModules": true,
     "checkJs": true,
     "jsx": "preserve",
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "include": ["src", ".eslintrc.json", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules", "build", ".vscode", ".git", "dist"]
