@@ -1,24 +1,17 @@
-'use client';
-
-import { useState } from 'react';
-import GiftBox from 'src/components/giftBox/GiftBox';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
-  const [isGiftOpen, setIsGiftOpen] = useState(false);
-
   return (
     <main className={styles.main}>
-      <h1>Joyeux noël !</h1>
+      <h1>App pour offrir des cadeaux !</h1>
       <div className={styles.box}>
-        <button
-          className={styles.giftButton}
-          onClick={() => {
-            setIsGiftOpen(!isGiftOpen);
-          }}
-        >
-          <GiftBox isOpen={isGiftOpen} />
-        </button>
+        <Link href="/noel-2023-papa" className={styles.linkButton}>
+          noel 2023 papa
+        </Link>
+        <Link href="/aniv-2024-maman" className={styles.linkButton}>
+          aniv 2024 maman
+        </Link>
       </div>
     </main>
   );
